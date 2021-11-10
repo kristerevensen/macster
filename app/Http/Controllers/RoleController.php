@@ -14,6 +14,7 @@ class RoleController extends Controller
      */
     public function __construct(Role $role)
     {
+        //$this->middleware('auth');
         $this->role = $role;
     }
     public function index()
@@ -30,6 +31,13 @@ class RoleController extends Controller
     public function create()
     {
         return view('role.create');
+    }
+
+    public function getAll(){
+        $roles = $this->role->all();
+        return response()->json([
+            'roles' => $roles
+        ], 200);
     }
 
     /**
@@ -54,13 +62,6 @@ class RoleController extends Controller
         }
 
         return response()->json("Role Created", 200);
-    }
-
-    public function getAll(){
-        $roles = $this->role->all();
-        return response()->json([
-            'roles' => $roles
-        ], 200);
     }
 
     /**

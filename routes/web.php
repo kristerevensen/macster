@@ -32,9 +32,9 @@ Route::group(['middleware' => 'auth'], function() {
 });
 
 
-Route::group(['middleware' => ['auth', 'role_or_permission:admin|create role|create permission']], function() {
+//Route::group(['middleware' => ['auth', 'role_or_permission:admin|create role|create permission']], function() {
     Route::resource('role', 'RoleController');
-});
+//});
 
 
 

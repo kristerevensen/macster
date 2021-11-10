@@ -103,7 +103,7 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ route('permission.index') }}" class="nav-link">
-                                            <i class="fas fa-bomb nav-icon"></i>
+                                            <i class="fas fa-key nav-icon"></i>
                                             <p>{{ __('Permissions') }}</p>
                                         </a>
                                     </li>
